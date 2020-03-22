@@ -2,6 +2,9 @@ import random
 
 
 class Creature:
+    """
+    The base type for all combative creatures
+    """
     def __init__(self, name, the_level):
         self.name = name
         self.level = the_level
@@ -16,8 +19,14 @@ class Creature:
 
 
 class Wizard(Creature):
-
     def attack(self, creature):
+        """
+        Commands the wizard to attack a creature
+
+        :param creature: the opponent to battle
+        :type creature: Creature
+        :return: True if wizard wins, False if they are defeated
+        """
         print("The wizard {} attacks {}!".format(
             self.name, creature.name
         ))

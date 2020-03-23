@@ -15,7 +15,8 @@ class Creature:
         )
 
     def get_defensive_roll(self):
-        return random.randint(1, 12) * self.level
+        roll = random.randint(1, 12)
+        return roll * self.level
 
 
 class Wizard(Creature):
